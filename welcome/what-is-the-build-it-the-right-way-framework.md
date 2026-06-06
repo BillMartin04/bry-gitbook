@@ -1,125 +1,164 @@
 ---
 description: >-
-  Build It the Right Way is a ServiceNow architecture framework for designing
-  scalable, secure, and maintainable solutions using proven architectural
-  principles.
+  The Build It The Right Way (BRY) Framework — an architecture-led,
+  compliance-first governance model for designing scalable, secure, and
+  maintainable ServiceNow solutions.
 ---
 
-# What is the Build It the Right Way Framework?
+# What is the Build It The Right Way Framework?
 
-### In this article
+{% hint style="info" %}
+🎥 **Anchor Video** *(to be embedded)*
 
-* Audience
-* Goals
-* Layers of the Build It the Right Way Framework
-* Adopt a phased learning process and improve quality iteratively
-* Related links
+Title: **Welcome to Build It The Right Way — The ServiceNow Architecture Framework**
 
+Length: ~5 minutes
 
+YouTube URL: *paste embed link here*
+{% endhint %}
 
-The **Build It the Right Way Framework** is an architectural guidance model designed specifically for the ServiceNow platform. It helps teams create scalable, secure, and maintainable solutions by providing principles, strategies, and recommendations across the full lifecycle of a ServiceNow implementation.
+The **Build It The Right Way (BRY) Framework** is an architectural governance model purpose-built for the ServiceNow platform. It guides teams to design, build, and operate solutions that are **scalable, secure, auditable, and aligned to the strategic intent of the business**.
 
-This framework enables your ServiceNow workloads to:
+BRY is inspired by the discipline of the **AWS Well-Architected Framework** and adapted for the realities of enterprise workflow platforms. It establishes a non-negotiable, architecture-led approach to platform delivery: every decision is traceable to a documented principle, every change passes a defined control gate, and every capability advances a measurable business outcome.
 
-* Be scalable, robust, and future-proof
-* Maintain high levels of security and auditability
-* Align with business needs and compliance requirements
-* Support platform governance and lifecycle efficiency
-* Enable faster delivery with consistent quality
+## The Problem BRY Solves
 
-The framework is built around **eight key architectural pillars**, each focused on a core aspect of sustainable ServiceNow development. These are:
+Modern enterprises scaling on ServiceNow consistently encounter four governance gaps. BRY is designed to close each one.
 
-\
-**Platform Governance, Configurable over Custom, Secure by Design, Performance-Aware, Lifecycle Ready, Service-Oriented, Extensibility, and Observability.**
+1. **Architectural Drift.** Tactical decisions accumulate into structural liabilities that cannot be unwound without disruptive rework.
+2. **Compliance Reactivity.** Audit, regulatory, and risk requirements are retrofitted into solutions rather than designed in at inception.
+3. **Customization Sprawl.** Out-of-the-box capability is bypassed in favor of bespoke development, eroding upgradeability and inflating total cost of ownership.
+4. **Ownership Ambiguity.** Cross-functional decisions stall because authority, accountability, and escalation paths are undefined.
 
-Each pillar comes with recommended practices, tradeoffs, and considerations for implementation. Design decisions are evaluated against all eight to maintain balance across technical and business priorities. While the framework is centered on ServiceNow, the principles apply to any enterprise workflow platform striving for excellence.
+## Audience
 
-Implementation choices depend on organizational context, but the framework provides a north star for structured and sustainable growth.
+BRY is authoritative for any role that influences platform design, build, operation, or ownership.
 
-### Audience
+| Role | How BRY Serves Them |
+|------|----------------------|
+| **Enterprise Architects** | Codifies the principles, patterns, and decision rights they are accountable for |
+| **Solution Architects** | Provides reusable templates, checklists, and trade-off frameworks |
+| **Platform Owners** | Establishes the control gates and KPIs that prove platform health |
+| **Compliance and Risk Officers** | Anchors security, audit, and regulatory mapping into the design phase |
+| **Product Managers** | Aligns business intent with architectural feasibility |
+| **Delivery Leads** | Standardizes the path from intake to production readiness |
+| **Executive Sponsors** | Provides board-grade visibility into architectural posture |
 
-The Build It the Right Way Framework is for anyone involved in the design, development, or ownership of ServiceNow solutions.
+BRY applies equally to **startups establishing first-time governance**, **large enterprises hardening at scale**, **managed service providers standardizing multi-tenant delivery**, and **public sector teams aligning to regulatory mandates**.
 
-Whether you're an architect, developer, platform owner, product manager, or business stakeholder, if you're responsible for making or influencing platform decisions, this framework provides value.
+## Goals
 
-It’s relevant to startups, large enterprises, managed service providers, and public sector teams. If your organization is building or scaling with ServiceNow, the framework helps establish technical guardrails and architectural consistency.
+The framework exists to drive four outcomes:
 
-If you're seeking enterprise-wide platform adoption or compliance alignment, Build It the Right Way pairs well with CSDM, APM, and strategic portfolio planning.
+1. **Architectural Success.** Well-informed design choices made early, avoiding technical debt.
+2. **Platform Confidence.** Decisions grounded in proven principles, validated across finance, healthcare, telecommunications, and public sector deployments.
+3. **Risk Awareness.** Architectural trade-offs evaluated early and aligned with governance, security posture, and user experience.
+4. **Continuous Improvement.** A benchmark to assess and mature platform capabilities iteratively over time.
 
-### Goals
+## The Eight BRY Pillars
 
-The framework exists to guide teams toward effective ServiceNow implementation and architectural excellence.
+The framework is anchored by **eight architectural pillars**. Each pillar is a non-optional lens applied to every design decision. A solution is considered architecturally sound only when it has been deliberately evaluated and balanced across all eight.
 
-**Architectural success**: Make well-informed design choices early and avoid technical debt.
+| Pillar | Core Principle |
+|--------|----------------|
+| **1. Platform Governance** | Authority, standards, and decision rights are defined before code is written |
+| **2. Configurable over Custom** | Out-of-the-box capability is exhausted before customization is approved |
+| **3. Secure by Design** | Security, privacy, and compliance controls are architectural inputs, not post-delivery additions |
+| **4. Performance-Aware** | Performance characteristics are designed, measured, and continuously protected |
+| **5. Lifecycle Ready** | Solutions survive upgrades, ownership transitions, and organizational change |
+| **6. Service-Oriented** | Capability is exposed and consumed as well-defined services aligned to CSDM |
+| **7. Extensibility** | Architectures absorb future capability without breaking current consumers |
+| **8. Observability** | What cannot be measured cannot be governed |
 
-**Platform confidence**: Rely on proven principles, validated through real-world use cases in industries like finance, healthcare, and telecommunications.
+{% hint style="warning" %}
+**Foundational Rule.** A design that optimizes one pillar at the expense of another is not a balanced architecture. The Technical Governance Council is responsible for explicit, documented trade-off decisions whenever pillars conflict.
+{% endhint %}
 
-**Risk-awareness**: Evaluate architectural tradeoffs early and align decisions with platform governance, security posture, and user experience.
+## The Three Layers of the Framework
 
-**Continuous improvement**: Use the framework as a benchmark to assess and mature your platform capabilities iteratively over time.
+BRY is organized into three layers of progressive specificity. Each layer builds on the one below.
 
-### Layers of the Build It the Right Way Framework
+| Layer | Purpose | Primary Artifacts |
+|-------|---------|-------------------|
+| **1. Pillars** | Foundational principles and design goals | Pillar Checklists, Trade-off Registers, Principle Catalog |
+| **2. Solution Units** | Application of pillars to specific ServiceNow domains (ITSM, IRM, ITOM, SPM, Custom Applications) | Solution Context, Design Areas, Best Practice Guides, Maturity Assessments |
+| **3. Capability Guides** | Architectural usage patterns for individual platform features | Pattern Library, Reference Architectures, Anti-pattern Catalog |
 
-The framework is organized into three layers: **Pillars, Solution Units, and Capability Guides.**
+### Layer 1: Pillars
 
-#### Pillars
+The foundation of the framework. Each pillar page introduces **core principles** and **design goals**, followed by **recommended approaches** that serve as non-optional considerations. A **checklist** evaluates how a solution aligns with each pillar, with links to implementation guides, reference architectures, and pattern libraries.
 
-The foundation of the framework begins with its eight architectural pillars. A full understanding of each pillar is essential to unlocking the guidance in the next layers.
+### Layer 2: Solution Units
 
-Each pillar is introduced with **core principles** and **design goals**. These are followed by **recommended approaches**, which serve as non-optional considerations when building ServiceNow solutions.
+Each Solution Unit applies the eight pillars to a specific ServiceNow domain. Every Solution Unit page contains:
 
-Once familiar with the principles, use the **Checklist** to evaluate how your solution aligns with each pillar. Each checklist item links to specific implementation guides, reference architectures, and pattern libraries.
-
-Design tradeoffs are identified clearly, helping teams balance decisions across performance, maintainability, and business goals.
-
-#### Solution Units
-
-This layer applies the eight pillars to specific ServiceNow use cases or solution areas (e.g., ITSM, IRM, ITOM, Custom Applications).
-
-Each solution unit includes:
-
-* **Design Principles** tailored to the use case
-* **Design Areas** highlighting critical architectural decisions
-* **Best Practice Guides** per area
-* **Maturity assessments** to benchmark solution readiness
+1. **Design Principles** tailored to the use case
+2. **Design Areas** highlighting critical architectural decisions
+3. **Best Practice Guides** per area
+4. **Maturity Assessments** to benchmark solution readiness
 
 Start with the **Solution Context**, then explore the **Design Areas** to identify where improvements or governance gaps may exist.
 
-#### Capability Guides
+### Layer 3: Capability Guides
 
-These guides focus on the implementation and usage of individual ServiceNow platform features from an architectural perspective.
+Capability Guides explain how to **design with** individual ServiceNow features, not how the features work. Each guide helps determine:
 
-They are not feature walkthroughs. Instead, they explain how to **design with features**, using them in a way that aligns with the framework pillars.
+1. **When** to use a feature
+2. **What** design patterns apply
+3. **How** to keep usage compliant, secure, and extensible
 
-Each guide helps you determine:
+## Adopt a Phased Learning Process
 
-* When to use a feature
-* What design patterns apply
-* How to keep usage compliant, secure, and extensible
+{% hint style="success" %}
+**Start small. Learn fast. Scale intentionally.**
+{% endhint %}
 
-### Adopt a phased learning process and improve quality iteratively
+BRY is designed to evolve with your platform. It is not intended to be implemented all at once. Begin with the highest-priority pillar based on your business goals, compliance obligations, or scalability needs. As your implementation matures, expand to additional pillars. Iterate using checklists, pattern validations, and design reviews. Revisit your architectural alignment every time your platform scales, integrates, or adopts a new capability.
 
-The Build It the Right Way Framework is designed to evolve with your platform.
+The phased approach works well across:
 
-It’s not intended to be implemented all at once. Instead, begin by focusing on the highest priority pillar based on your business goals, compliance obligations, or scalability needs.
+1. **Initial design and build phases**
+2. **Production readiness and go-live**
+3. **Scaling to enterprise-level workloads**
+4. **Audit, review, and governance checkpoints**
 
-Then, as your implementation matures, expand to other pillars. Iterate using checklists, pattern validations, and design reviews. Revisit your architectural alignment every time your platform scales, integrates, or adopts a new capability.
+## How BRY Compares to AWS Well-Architected
 
-This phased approach works well across:
+BRY borrows the **discipline** of AWS Well-Architected and applies it to the **ServiceNow context**.
 
-* Initial design and build phases
-* Production readiness and go-live
-* Scaling to enterprise-level workloads
-* Audit, review, and governance checkpoints
+| AWS Well-Architected | Build It The Right Way |
+|----------------------|------------------------|
+| 6 Pillars (Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, Sustainability) | 8 Pillars tuned for enterprise workflow platforms |
+| Lenses (Serverless, SaaS, FinServ, ML, Healthcare) | Solution Units (ITSM, IRM, ITOM, SPM, Custom Applications) |
+| Well-Architected Labs | Capability Guides |
+| Well-Architected Tool | BRY Assessment Toolkit |
+| Review Process | BRY Control Gates (G0–G4) |
 
-Start small, learn fast, and scale intentionally.
+## The BRY Compact
 
-### Related links
+{% hint style="info" %}
+**Seven Governing Principles**
 
-Here are some resources to get started with the Build It the Right Way Framework:
+1. **Architecture leads. Delivery follows.**
+2. **Configuration is a virtue. Customization is a debt.**
+3. **Compliance is designed, not retrofitted.**
+4. **Every decision is recorded. Every gate is honored.**
+5. **Pillars are balanced. Trade-offs are explicit.**
+6. **Measure what you govern. Govern what you measure.**
+7. **Start small. Learn fast. Scale intentionally.**
+{% endhint %}
 
-* \[ServiceNow Build It the Right Way Architecture Pillars]
-* \[Architectural Patterns for ServiceNow]
-* \[Design Patterns Catalog (GitHub)]
-* \[YouTube: Build It the Right Way Series with Bill]
-* \[Build It the Right Way Assessment Toolkit]
+## Related Resources
+
+1. ServiceNow BRY Architecture Pillars *(internal — page coming)*
+2. Architectural Patterns for ServiceNow *(internal — page coming)*
+3. BRY Assessment Toolkit *(internal — page coming)*
+4. YouTube: Build It The Right Way Series with Bill *(external link placeholder)*
+5. [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/) *(reference inspiration)*
+6. [ServiceNow Common Service Data Model (CSDM)](https://www.servicenow.com/community/in-other-news/csdm-service-migration-playbook-and-use-case-examples/ba-p/2977443) *(reference standard)*
+
+---
+
+> **Document Control**
+>
+> Owner: Office of the Chief Enterprise Architect · Review Cadence: Quarterly · Status: Canonical

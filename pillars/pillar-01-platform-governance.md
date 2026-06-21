@@ -11,9 +11,9 @@ description: >-
 > **Shadow customisation is a governance problem, not a developer problem.**
 > The developers are doing what the operating model permits. Change the operating model, the behaviour changes with it.
 
-{% embed url="https://youtu.be/3vlwvdOvWZM" %}
 **Watch first.** A thirteen-minute walkthrough of this pillar. The page below is the operational reference.
-{% endembed %}
+
+{% embed url="https://youtu.be/3vlwvdOvWZM" %}
 
 ## The scene this pillar prevents
 

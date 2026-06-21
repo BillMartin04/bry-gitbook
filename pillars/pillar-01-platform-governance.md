@@ -13,7 +13,7 @@ description: >-
 
 **Watch first.** A thirteen-minute walkthrough of this pillar. The page below is the operational reference.
 
-{% embed url="https://youtu.be/3vlwvdOvWZM" %}
+{% embed url="https://www.youtube.com/watch?v=3vlwvdOvWZM" %}
 
 ## The scene this pillar prevents
 

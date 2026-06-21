@@ -7,6 +7,7 @@
 ## Pillars
 
 * [Overview: ServiceNow Build It the Right Way Framework Pillars](pillars/servicenow-architecture-pillars.md)
+* [Pillar 01 · Platform Governance](pillars/pillar-01-platform-governance.md)
 
 ## Design Decisions
 

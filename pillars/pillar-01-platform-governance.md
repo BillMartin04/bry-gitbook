@@ -8,12 +8,12 @@ description: >-
 
 # Pillar 01 · Platform Governance
 
+{% embed url="https://youtu.be/3vlwvdOvWZM" %}
+A thirteen-minute walkthrough of Pillar 01. The page below is the operational reference.
+{% endembed %}
+
 > **Shadow customisation is a governance problem, not a developer problem.**
 > The developers are doing what the operating model permits. Change the operating model, the behaviour changes with it.
-
-{% embed url="https://youtu.be/3vlwvdOvWZM" %}
-**Watch first.** A thirteen-minute walkthrough of this pillar. The page below is the operational reference.
-{% endembed %}
 
 ## The scene this pillar prevents
 

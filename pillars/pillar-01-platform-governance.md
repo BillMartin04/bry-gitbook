@@ -2,18 +2,16 @@
 description: >-
   Pillar 01 of the Build It The Right Way framework. The operating model that
   prevents shadow customisation on ServiceNow. Architecture Review Board, four
-  control gates, scope discipline, RACI, maturity ladder, and a ninety-day
-  adoption plan.
+  control gates, scope discipline, RACI, maturity
 ---
 
 # Pillar 01 · Platform Governance
 
-> **Shadow customisation is a governance problem, not a developer problem.**
-> The developers are doing what the operating model permits. Change the operating model, the behaviour changes with it.
+> **Shadow customisation is a governance problem, not a developer problem.** The developers are doing what the operating model permits. Change the operating model, the behaviour changes with it.
 
-{% embed url="https://youtu.be/3vlwvdOvWZM" %}
+{% embed url="https://www.youtube.com/watch?v=3vlwvdOvWZM" %}
+
 **Watch first.** A thirteen-minute walkthrough of this pillar. The page below is the operational reference.
-{% endembed %}
 
 ## The scene this pillar prevents
 
@@ -29,10 +27,7 @@ This is **shadow customisation**, the single most expensive failure mode of the 
 
 The framework has eight pillars. Platform Governance is first because every other pillar collapses without it.
 
-> **Configurable over Custom** fails when anyone with developer access can write anything.
-> **Secure by Design** fails when scope is decided in a hurry.
-> **Lifecycle Ready** fails when half the platform was built outside the release process.
-> **Observability** fails when nobody knows what shipped last week.
+> **Configurable over Custom** fails when anyone with developer access can write anything. **Secure by Design** fails when scope is decided in a hurry. **Lifecycle Ready** fails when half the platform was built outside the release process. **Observability** fails when nobody knows what shipped last week.
 
 Platform Governance is not the most exciting pillar. It is the one that makes the others possible.
 
@@ -40,12 +35,12 @@ Platform Governance is not the most exciting pillar. It is the one that makes th
 
 If your platform does not have explicit, documented, enforced answers to these four questions, you do not have governance. You have a wish.
 
-| **Question** | **What it means** | **Who answers** |
-| --- | --- | --- |
-| **01 · Who decides what gets built** | Not who builds it. Who decides it should be built at all. | Architect plus product owner, together, before any story is touched |
-| **02 · On what scope** | Global, scoped application, or new application. Determines upgrade safety, security posture, lifecycle ownership for the next ten years. | Architect, at design time. Not a developer choice. |
-| **03 · With what approval** | Every change has a gate. Small, large, or emergency. There is no such thing as an ungoverned change. | The Architecture Review Board |
-| **04 · With what consequence** | If a build ships without passing the gate, what happens. Governance without consequence is a suggestion. | Platform owner, with executive backing |
+| **Question**                         | **What it means**                                                                                                                        | **Who answers**                                                     |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| **01 · Who decides what gets built** | Not who builds it. Who decides it should be built at all.                                                                                | Architect plus product owner, together, before any story is touched |
+| **02 · On what scope**               | Global, scoped application, or new application. Determines upgrade safety, security posture, lifecycle ownership for the next ten years. | Architect, at design time. Not a developer choice.                  |
+| **03 · With what approval**          | Every change has a gate. Small, large, or emergency. There is no such thing as an ungoverned change.                                     | The Architecture Review Board                                       |
+| **04 · With what consequence**       | If a build ships without passing the gate, what happens. Governance without consequence is a suggestion.                                 | Platform owner, with executive backing                              |
 
 ## The Architecture Review Board
 
@@ -75,12 +70,12 @@ Approves or rejects. A rejected design does not ship. A rejected design that shi
 
 The ARB operates through four gates. Sequential. Mandatory. Documented.
 
-| **Gate** | **When** | **What clears the gate** |
-| --- | --- | --- |
-| **Gate 01 · Design Intent** | Before development starts | Pillar checklist signed off by the architect. Compliance consulted. No story enters the sprint without it. |
-| **Gate 02 · Build Review** | Mid build | ARB validates implementation against Solution Unit design areas. Catches the design that drifted in practice. |
-| **Gate 03 · Pre-Production** | Before deployment | Capability Guide compliance confirmed. Risk log cleared or each open risk formally accepted in writing. |
-| **Gate 04 · Post Go-Live Audit** | Ninety days after deployment | Maturity assessment re-scored. Findings feed next quarter's priorities. |
+| **Gate**                         | **When**                     | **What clears the gate**                                                                                      |
+| -------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Gate 01 · Design Intent**      | Before development starts    | Pillar checklist signed off by the architect. Compliance consulted. No story enters the sprint without it.    |
+| **Gate 02 · Build Review**       | Mid build                    | ARB validates implementation against Solution Unit design areas. Catches the design that drifted in practice. |
+| **Gate 03 · Pre-Production**     | Before deployment            | Capability Guide compliance confirmed. Risk log cleared or each open risk formally accepted in writing.       |
+| **Gate 04 · Post Go-Live Audit** | Ninety days after deployment | Maturity assessment re-scored. Findings feed next quarter's priorities.                                       |
 
 > **Caught at Gate 02, the fix is cheap. Caught at Gate 03, expensive. Caught after go-live, a project.**
 
@@ -102,7 +97,7 @@ The governance decision violated most often. Every artefact on the Now Platform 
 3. Its own ACL model, its own update set hygiene
 4. A named owner, a defined lifecycle
 
-The governance question is not *does this need to be scoped*. The question is **what is the cost of putting this in global**. If you cannot answer at design time, you are not ready to ship.
+The governance question is not _does this need to be scoped_. The question is **what is the cost of putting this in global**. If you cannot answer at design time, you are not ready to ship.
 
 Scope is an architectural decision. Made at Gate 01. Signed off by the architect.
 
@@ -110,13 +105,13 @@ Scope is an architectural decision. Made at Gate 01. Signed off by the architect
 
 Five roles. Five lanes. No overlap on decision authority.
 
-| **Role** | **Primary responsibility** | **Authority** |
-| --- | --- | --- |
-| **Architect** | Pillar interpretation and design-gate sign off | Owns Gate 01 and Gate 02 decisions |
-| **Platform Owner** | Adoption pace and KPI delivery | Absorbs the political cost of an ARB rejection |
-| **Developer** | Capability Guide application on the ground | Raises pillar conflicts the moment they appear |
-| **Delivery Manager** | Gate enforcement inside the delivery pipeline | Blocks stories from entering the sprint until Gate 01 clears |
-| **Compliance Lead** | Consulted at Gate 01 and Gate 03 | Has authority to escalate any regulatory exposure |
+| **Role**             | **Primary responsibility**                     | **Authority**                                                |
+| -------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
+| **Architect**        | Pillar interpretation and design-gate sign off | Owns Gate 01 and Gate 02 decisions                           |
+| **Platform Owner**   | Adoption pace and KPI delivery                 | Absorbs the political cost of an ARB rejection               |
+| **Developer**        | Capability Guide application on the ground     | Raises pillar conflicts the moment they appear               |
+| **Delivery Manager** | Gate enforcement inside the delivery pipeline  | Blocks stories from entering the sprint until Gate 01 clears |
+| **Compliance Lead**  | Consulted at Gate 01 and Gate 03               | Has authority to escalate any regulatory exposure            |
 
 ## Three shadow customisation patterns
 
@@ -140,11 +135,11 @@ A senior executive wants a dashboard. Requires a small table extension. Built ov
 
 Three levels. Locate yourself honestly.
 
-| **Level** | **Signal** | **Typical timeline to next level** |
-| --- | --- | --- |
-| **Reactive** | No standing ARB. No design gates. Governance happens after the fact, when something breaks. | A quarter to reach Managed |
-| **Managed** | ARB exists. Composition and cadence in place. Gates documented but inconsistently enforced. | A year to reach Strategic |
-| **Strategic** | ARB is the centre of how the platform evolves. All four gates run on every build. Maturity assessment re-scored every quarter. Platform Governance is no longer a project, it is a property of the platform. | The goal |
+| **Level**     | **Signal**                                                                                                                                                                                                   | **Typical timeline to next level** |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| **Reactive**  | No standing ARB. No design gates. Governance happens after the fact, when something breaks.                                                                                                                  | A quarter to reach Managed         |
+| **Managed**   | ARB exists. Composition and cadence in place. Gates documented but inconsistently enforced.                                                                                                                  | A year to reach Strategic          |
+| **Strategic** | ARB is the centre of how the platform evolves. All four gates run on every build. Maturity assessment re-scored every quarter. Platform Governance is no longer a project, it is a property of the platform. | The goal                           |
 
 Both transitions require executive air cover. Neither happens by accident.
 
@@ -152,13 +147,13 @@ Both transitions require executive air cover. Neither happens by accident.
 
 One pillar. One ARB. Four gates. Twelve weeks.
 
-| **Weeks** | **Move** | **What clears the milestone** |
-| --- | --- | --- |
-| **1 to 2** | Convene the ARB | Five named people. Standing meeting on your release cadence. |
-| **3 to 4** | Adopt Gate 01 | Every new build walks the pillar checklist at design time. Architect signs off in writing. No exceptions. |
-| **5 to 6** | Adopt Gate 02 | Mid-build review running. ARB validates implementation against Solution Unit design areas. |
-| **7 to 10** | Adopt Gate 03 | Pre-production risk log discipline. Written acceptance of open risks by the platform owner. |
-| **11 to 12** | Adopt Gate 04 | Post go-live audit cadence set. Maturity re-score scheduled in ninety days. |
+| **Weeks**    | **Move**        | **What clears the milestone**                                                                             |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------- |
+| **1 to 2**   | Convene the ARB | Five named people. Standing meeting on your release cadence.                                              |
+| **3 to 4**   | Adopt Gate 01   | Every new build walks the pillar checklist at design time. Architect signs off in writing. No exceptions. |
+| **5 to 6**   | Adopt Gate 02   | Mid-build review running. ARB validates implementation against Solution Unit design areas.                |
+| **7 to 10**  | Adopt Gate 03   | Pre-production risk log discipline. Written acceptance of open risks by the platform owner.               |
+| **11 to 12** | Adopt Gate 04   | Post go-live audit cadence set. Maturity re-score scheduled in ninety days.                               |
 
 The first ten Gate 01 reviews will be slow. They get faster. By week twelve the team is operating the framework, not having it imposed on them.
 
@@ -178,6 +173,6 @@ Score your platform on each. Three or more **No** answers and you are on the Rea
 
 **Pillar 02 · Configurable over Custom.** Why custom code is the last resort, never the default. Coming next in the Build It The Right Way pillar series.
 
----
+***
 
-*Authored by Bill Martin · ServiceNow MVP 2026 · Certified Technical Architect · [techtalkwbill](https://www.youtube.com/@techtalkwbill)*
+_Authored by Bill Martin · ServiceNow MVP 2026 · Certified Technical Architect ·_ [_techtalkwbill_](https://www.youtube.com/@techtalkwbill)

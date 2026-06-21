@@ -2,7 +2,7 @@
 
 ## Welcome
 
-* [What is the Build It the Right Way Framework?](welcome/what-is-the-build-it-the-right-way-framework.md)
+* [What is the Build It the Right Way Framework?](README.md)
 * [Who This Is For](welcome/who-this-is-for.md)
 * [How to Read the Framework](welcome/how-to-read-the-framework.md)
 
